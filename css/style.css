@@ -167,6 +167,60 @@ nav {
     border-radius: 100%;
   }
 }
+/* nav animasi */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Terapkan ke nav__header */
+.nav__header {
+  animation: fadeSlideDown 0.8s ease-out forwards;
+}
+
+/* Animasi untuk daftar link */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan ke nav links */
+.nav__links li {
+  opacity: 0; /* mulai dari tidak terlihat */
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+/* Delay tiap item agar muncul bertahap */
+.nav__links li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.nav__links li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.nav__links li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.nav__links li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Animasi tombol */
+.nav__btn {
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 1s;
+}
 
 /* header */
 
@@ -216,9 +270,9 @@ nav {
 
 .header__content h1 {
   margin-bottom: 1rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 4rem;
+  line-height: 3.75rem;
   color: var(--text-dark);
   text-align: center;
 }
